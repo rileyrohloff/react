@@ -8,7 +8,7 @@ import About from './components/pages/About';
 import uuid from 'uuid';
 import axios from 'axios';
 
-
+export const add = (a, b) => a + b;
 class App extends Component {
   state = {
     todos: []
