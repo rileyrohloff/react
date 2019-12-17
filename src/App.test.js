@@ -1,4 +1,4 @@
-import { App, addTodo } from './App';
+import App  from './App';
 import React from 'react';
 
 test('#addTodo() with axios', () => {
