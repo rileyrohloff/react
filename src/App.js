@@ -8,7 +8,6 @@ import About from './components/pages/About';
 import uuid from 'uuid';
 import axios from 'axios';
 
-export const add = (a, b) => a + b;
 class App extends Component {
   state = {
     todos: []
@@ -43,7 +42,6 @@ class App extends Component {
   }
 
 
-
   render() {
       return (
         <Router>
@@ -64,4 +62,5 @@ class App extends Component {
       );
   }
   }
-export default App;
+
+export default App

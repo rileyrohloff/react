@@ -1,7 +1,6 @@
-import App from './App';
+import { App, addTodo } from './App';
 import React from 'react';
-import { add } from './App'
 
-test('Adding test', () => {
-  expect(add(1,2)).toEqual(3)
-});
+test('#addTodo() with axios', () => {
+    expect(addTodo('Jest')).toContain('id');
+})
