@@ -89,6 +89,4 @@ test('adding todo to list from text box', async () => {
     const newAddedTodo = await findByText('JEST TEST')
     expect(todoItemsAfter).toHaveLength(4);
     expect(newAddedTodo).not.toBeNull();
-
-
 })
