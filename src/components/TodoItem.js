@@ -20,9 +20,9 @@ class TodoItem extends Component {
         return (
         <div style={this.getStyle()}>
         <p>
-            <input type='checkbox' onChange={this.props.markComplete.bind(this, id)}/> {"  "}
+            <input type='checkbox' aria-label='mark complete' checked={this.props.todo.completed} onChange={() => this.props.markComplete(id)}/> {"  "}
             { title }
-            <button style={btnStyle} onClick={this.props.delTodo.bind(this, id)}>Delete</button>
+            <button style={btnStyle} aria-label='delete todo' onClick={() => this.props.delTodo(id)}>Delete</button>
             </p>
         </div>
         )

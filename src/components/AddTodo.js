@@ -23,11 +23,13 @@ class AddTodo extends Component {
                 style={{ flex: '10', padding: '5px' }}
                 value={this.state.title}
                 onChange={this.onChange}
+                aria-label="new todo name"
                 />
                 <input type="submit"
                 value="Submit"
                 className="btn"
                 style={{ flex: 1 }}
+                aria-label="add todo"
                 />
             </form>
         )
