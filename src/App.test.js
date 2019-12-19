@@ -91,6 +91,17 @@ test('adding todo to list from text box', async () => {
     expect(newAddedTodo).not.toBeNull();
 });
 
-test('mark todo complete via checkbox',() => {
+test('mark todo complete via checkbox',async () => {
+    const { findAllByLabelText, findByText } = render(<App />);
+    const todos = await findAllByLabelText('mark complete');
+    const firstTodoCheckBox = todos[0]
+
     
+    expect(firstTodoCheckBox.checked).not.toBe(true);
+
+    await act( async () => {
+        fireEvent.click(firstTodoCheckBox);
+    })
+    expect(firstTodoCheckBox.checked).toBe(true);
+
 });
